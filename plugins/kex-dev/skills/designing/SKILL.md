@@ -1,5 +1,5 @@
 ---
-name: design
+name: designing
 version: 0.1.0
 description: 脑暴 + 设计：探索需求、讨论方案、产出设计文档到 docs/design/。当用户说"设计方案"、"脑暴"、"讨论设计"时触发。
 ---

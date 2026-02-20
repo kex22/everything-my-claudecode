@@ -1,5 +1,5 @@
 ---
-name: review
+name: reviewing
 version: 0.1.0
 description: 当用户说"代码审查"、"review代码"、"检查实现"时触发。多维度审查实现代码，可独立迭代。
 ---

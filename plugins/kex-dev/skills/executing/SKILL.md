@@ -1,5 +1,5 @@
 ---
-name: execute
+name: executing
 version: 0.1.0
 description: 按 plan 逐步实现，TDD 驱动，批量执行 + checkpoint。当用户说"执行计划"、"开始实现"、"按plan做"时触发。
 ---

@@ -1,5 +1,5 @@
 ---
-name: init
+name: initializing
 version: 0.1.0
 description: 项目初始化时使用。当用户说"初始化项目"、"开始新项目"、"检查项目结构"时触发。介绍开发工作流，检查并注入 CLAUDE.md 规范，确保目录结构就绪。
 ---

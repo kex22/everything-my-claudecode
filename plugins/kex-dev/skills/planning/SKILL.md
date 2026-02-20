@@ -1,5 +1,5 @@
 ---
-name: plan
+name: planning
 version: 0.1.0
 description: 当用户说"生成计划"、"写实施计划"、"规划实现"时触发。从设计文档生成实施计划，产出到 docs/plans/，支持滚动规划和并行感知。
 ---

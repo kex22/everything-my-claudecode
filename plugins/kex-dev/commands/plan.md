@@ -3,4 +3,4 @@ description: "从设计文档生成实施计划，产出到 docs/plans/，支持
 disable-model-invocation: true
 ---
 
-Invoke the kex-dev:plan skill and follow it exactly as presented to you
+Invoke the kex-dev:planning skill and follow it exactly as presented to you

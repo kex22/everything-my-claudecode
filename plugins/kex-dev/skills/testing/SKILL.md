@@ -1,5 +1,5 @@
 ---
-name: test
+name: testing
 version: 0.1.0
 description: 测试验证：运行项目测试套件，确认质量达标。当用户说"跑测试"、"验证代码"、"测试一下"时触发。
 ---

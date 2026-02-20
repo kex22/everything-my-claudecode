@@ -3,4 +3,4 @@ description: "项目初始化：介绍开发工作流，检查目录结构和 CL
 disable-model-invocation: true
 ---
 
-Invoke the kex-dev:init skill and follow it exactly as presented to you
+Invoke the kex-dev:initializing skill and follow it exactly as presented to you
