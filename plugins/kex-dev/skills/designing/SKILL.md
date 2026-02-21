@@ -22,12 +22,12 @@ description: 脑暴 + 设计：探索需求、讨论方案、产出设计文档�
 
 为以下每个步骤创建 task，按顺序完成：
 
-1. **探索项目上下文** — 读取 CLAUDE.md、docs/design/、docs/plans/、近期 commits
+1. **探索项目上下文** — 读取 CLAUDE.md、docs/design/、`docs/plans/OVERVIEW.md`、近期 commits
 2. **逐一提问澄清需求** — 每次只问一个问题，理解目的/约束/成功标准
 3. **提出 2-3 种方案** — 附带权衡分析和推荐
 4. **逐节展示设计** — 每节确认后再继续，按复杂度调整篇幅
 5. **编写设计文档** — 保存到 `docs/design/<name>.md` 并提交
-6. **过渡到实施** — 提示用户执行 `/plan`
+6. **过渡到实施** — 提示用户执行 `/kex-dev:plan`
 
 ## 详细流程
 

@@ -15,7 +15,7 @@ description: 按 plan 逐步实现，TDD 驱动，批量执行 + checkpoint。�
 ## Step 1：加载与审查 Plan
 
 1. 读取 `CLAUDE.md` 了解项目技术栈和规范
-2. 扫描 `docs/plans/` 找到"待执行"或"进行中"的 plan（无则提示先执行 `/plan`）
+2. 读取 `docs/plans/OVERVIEW.md` 找到"待执行"或"进行中"的 plan（无 OVERVIEW 则扫描 plan 文件）
 3. 批判性审查 plan — 发现问题先与用户讨论再开始
 4. 从上次未完成的步骤继续（支持跨 session 恢复）
 5. 创建 task 追踪每个步骤
@@ -28,6 +28,7 @@ description: 按 plan 逐步实现，TDD 驱动，批量执行 + checkpoint。�
 3. 运行 plan 指定的验证命令
 4. 标记为 completed
 5. 更新 plan 文件 checkbox 和状态行
+6. 提交时调用 `/kex-dev:commit`（自动关联 plan）
 
 ## TDD 铁律
 
@@ -62,8 +63,9 @@ Red-Green-Refactor 循环：
 所有 task 完成后：
 - 将 plan 状态改为"已完成"
 - 移入 `docs/plans/archive/`，注明归档时间
+- **更新 `docs/plans/OVERVIEW.md`**：将该模块从"活跃计划"移到"已完成模块"，更新"下一步"
 - 记录经验教训到 `CLAUDE.md`
-- 提示用户执行 `/review`
+- 提示用户执行 `/kex-dev:review`
 
 ## 何时停下来
 

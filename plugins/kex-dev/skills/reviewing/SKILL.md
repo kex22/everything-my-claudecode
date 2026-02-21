@@ -10,7 +10,7 @@ description: 当用户说"代码审查"、"review代码"、"检查实现"时触�
 
 1. 通过 git diff 确定本次审查的代码变更范围
 2. 读取相关的设计文档（`docs/design/`）作为参照
-3. 如果有对应的 plan（`docs/plans/` 或 `archive/`），一并加载
+3. 读取 `docs/plans/OVERVIEW.md` 定位对应的 plan，如需详情再读具体 plan 文件
 
 ## 审查维度
 
@@ -53,4 +53,4 @@ description: 当用户说"代码审查"、"review代码"、"检查实现"时触�
 - **🟢 可选优化**：风格、命名、简化
 
 如无问题，确认审查通过。
-完成后提示用户下一步可执行 `/test`。
+完成后提示用户下一步可执行 `/kex-dev:test`。

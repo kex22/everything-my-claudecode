@@ -13,8 +13,8 @@ description: 当用户说"生成计划"、"写实施计划"、"规划实现"时�
 ## 前置检查
 
 1. 读取 `CLAUDE.md` 了解项目技术栈和规范
-2. 读取 `docs/design/` 确认有设计文档可供参考（无则提示先执行 `/design`）
-3. 读取 `docs/plans/` 了解已有计划和当前进度
+2. 读取 `docs/design/` 确认有设计文档可供参考（无则提示先执行 `/kex-dev:design`）
+3. 读取 `docs/plans/OVERVIEW.md` 了解已有计划和当前进度（不存在则扫描 plan 文件）
 
 ## 滚动规划 + 并行感知
 
@@ -33,7 +33,7 @@ description: 当用户说"生成计划"、"写实施计划"、"规划实现"时�
 
 ## Plan 文件结构
 
-每个模块一个文件，保存到 `docs/plans/<phase>-<module>.md`：
+每个模块一个文件，保存到 `docs/plans/YYYYMMDD-<phase>-<module>.md`（日期为创建当天）：
 
 ````markdown
 # <模块名> 实施计划
@@ -77,7 +77,7 @@ fn test_specific_behavior() {
 **Step 5: 提交**
 ```bash
 git add <files>
-git commit -m "feat: add specific feature"
+git commit -m "feat(<plan-name>): add specific feature"  # 由 /kex-dev:commit 技能生成
 ```
 ````
 
@@ -93,13 +93,14 @@ git commit -m "feat: add specific feature"
 Plan 保存后，提供执行选项：
 
 **"Plan 已保存到 `docs/plans/<filename>.md`。两种执行方式：**
-1. **当前 session 继续** — 直接调用 `/execute`
-2. **新 session 执行（推荐）** — 清理上下文，新 session 中调用 `/execute`，避免讨论历史干扰
+1. **当前 session 继续** — 直接调用 `/kex-dev:execute`
+2. **新 session 执行（推荐）** — 清理上下文，新 session 中调用 `/kex-dev:execute`，避免讨论历史干扰
 
 **选择哪种？"**
 
 ## 产出规范
 
-- 文件命名：`docs/plans/<phase>-<module>.md`
+- 文件命名：`docs/plans/YYYYMMDD-<phase>-<module>.md`（日期为创建当天）
 - 头部必须有状态标记（`待执行` / `进行中 (x/y步完成)` / `已完成`）
 - 完成的 plan 移入 `docs/plans/archive/`，注明归档时间和原因
+- **Plan 保存后，更新 `docs/plans/OVERVIEW.md`**：在"活跃计划"表格中添加新条目
