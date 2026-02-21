@@ -62,8 +62,7 @@ Red-Green-Refactor 循环：
 
 所有 task 完成后：
 - 将 plan 状态改为"已完成"
-- 移入 `docs/plans/archive/`，注明归档时间
-- **更新 `docs/plans/OVERVIEW.md`**：将该模块从"活跃计划"移到"已完成模块"，更新"下一步"
+- **调用 `/kex-dev:plans-maintenance` 执行归档 + 更新 OVERVIEW**
 - 记录经验教训到 `CLAUDE.md`
 - 提示用户执行 `/kex-dev:review`
 

@@ -10,11 +10,16 @@ description: 当用户说"生成计划"、"写实施计划"、"规划实现"时�
 
 **开始时宣布：** "我正在使用 plan 技能来生成实施计划。"
 
+## 设计文档是活文档
+
+规划过程中若发现设计缺陷或遗漏，**先更新 `docs/design/` 再写 plan**。设计文档必须始终反映"应该是什么"，而非停留在初稿状态。Plan 从正确的设计中派生，不从过时的设计中派生。
+
 ## 前置检查
 
 1. 读取 `CLAUDE.md` 了解项目技术栈和规范
 2. 读取 `docs/design/` 确认有设计文档可供参考（无则提示先执行 `/kex-dev:design`）
 3. 读取 `docs/plans/OVERVIEW.md` 了解已有计划和当前进度（不存在则扫描 plan 文件）
+4. 检查设计文档是否覆盖了本次规划的内容，缺失则先补充设计
 
 ## 滚动规划 + 并行感知
 
@@ -102,5 +107,4 @@ Plan 保存后，提供执行选项：
 
 - 文件命名：`docs/plans/YYYYMMDD-<phase>-<module>.md`（日期为创建当天）
 - 头部必须有状态标记（`待执行` / `进行中 (x/y步完成)` / `已完成`）
-- 完成的 plan 移入 `docs/plans/archive/`，注明归档时间和原因
-- **Plan 保存后，更新 `docs/plans/OVERVIEW.md`**：在"活跃计划"表格中添加新条目
+- **Plan 保存后，调用 `/kex-dev:plans-maintenance` 更新 OVERVIEW.md**
