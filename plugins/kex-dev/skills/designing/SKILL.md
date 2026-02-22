@@ -22,7 +22,7 @@ description: 脑暴 + 设计：探索需求、讨论方案、产出设计文档�
 
 为以下每个步骤创建 task，按顺序完成：
 
-1. **探索项目上下文** — 读取 CLAUDE.md、`docs/design/overview.md`（顶层索引）、`docs/design/roadmap.md`、`docs/plans/overview.md`、近期 commits
+1. **探索项目上下文** — 读取 CLAUDE.md、`${CLAUDE_PLUGIN_ROOT}/shared/conventions.md`、`docs/design/overview.md`（顶层索引）、`docs/design/roadmap.md`、`docs/plans/overview.md`、近期 commits
 2. **逐一提问澄清需求** — 每次只问一个问题，理解目的/约束/成功标准
 3. **提出 2-3 种方案** — 附带权衡分析和推荐
 4. **逐节展示设计** — 每节确认后再继续，按复杂度调整篇幅
@@ -49,8 +49,6 @@ description: 脑暴 + 设计：探索需求、讨论方案、产出设计文档�
 - 随时准备回退修改
 
 ## 设计文档规范
-
-读取 `shared/conventions.md` 了解设计文档结构和 Roadmap 规范。
 
 - 提交到 git
 

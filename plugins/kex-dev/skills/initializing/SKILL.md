@@ -23,7 +23,7 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 
 ## 2. 检查项目结构
 
-读取 `shared/conventions.md` 了解文件夹结构规范，向用户介绍 `docs/` 的组织方式（设计文档层级、实施计划生命周期、Roadmap）。
+读取 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 了解文件夹结构规范，向用户介绍 `docs/` 的组织方式（设计文档层级、实施计划生命周期、Roadmap）。
 
 确认以下目录存在，不存在则创建：
 - `docs/design/`
@@ -36,7 +36,7 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 读取项目根目录的 `CLAUDE.md`，确认包含以下关键章节：
 - 工作流程（技能链顺序）
 - 文档目录职责
-- 实施计划规范（参照 `shared/conventions.md` 中的命名、状态标记、archive 机制）
+- 实施计划规范（参照 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 中的命名、状态标记、archive 机制）
 - 提交规范（plan 文件名作为 scope，详见 `/kex-dev:commit` 技能）
 - 经验教训
 

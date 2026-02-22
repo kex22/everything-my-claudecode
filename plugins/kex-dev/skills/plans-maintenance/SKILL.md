@@ -10,6 +10,8 @@ description: Plans 文件夹管家：一致性检查、归档、OVERVIEW 维护�
 
 **开始时宣布：** "我正在检查 plans 文件夹一致性。"
 
+**前置**：读取 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 了解实施计划和 Roadmap 规范。
+
 ## 触发场景
 
 - planning skill 创建新 plan 后调用（更新 OVERVIEW）
@@ -25,8 +27,6 @@ description: Plans 文件夹管家：一致性检查、归档、OVERVIEW 维护�
 3. **缺失状态头**：plan 文件没有状态标记 → 提醒补充
 
 ## 归档流程
-
-读取 `shared/conventions.md` 了解实施计划和 Roadmap 规范。
 
 将已完成的 plan 移入 `docs/plans/archive/`：
 
