@@ -10,7 +10,7 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 
 ## 第一步：创建 Task 追踪
 
-立即使用 TaskCreate 创建以下 5 个 task（不做任何文件读取）：
+**在同一条消息中并行调用 5 次 TaskCreate**，一次性创建全部 task，创建完成前不做任何其他操作：
 
 1. "介绍开发工作流" — activeForm: "介绍开发工作流"
 2. "确认目录结构" — activeForm: "确认目录结构"
@@ -18,7 +18,7 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 4. "介绍文档目录用途" — activeForm: "介绍文档目录用途"
 5. "显示当前进度" — activeForm: "显示当前进度"
 
-然后**逐个执行**每个 task（标记 in_progress → 读取所需文件 → 执行 → 标记 completed）。
+确认 5 个 task 全部创建后，再从 Task 1 开始逐个执行（标记 in_progress → 执行 → 标记 completed）。
 
 ### Task 1：介绍开发工作流
 
