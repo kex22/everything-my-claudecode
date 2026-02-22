@@ -105,6 +105,6 @@ Plan 保存后，提供执行选项：
 
 ## 产出规范
 
-- 文件命名：`docs/plans/YYYYMMDD-<phase>-<module>.md`（日期为创建当天）
-- 头部必须有状态标记（`待执行` / `进行中 (x/y步完成)` / `已完成`）
+读取 `shared/conventions.md` 了解实施计划命名和状态标记规范。
+
 - **Plan 保存后，调用 `/kex-dev:plans-maintenance` 更新 overview.md**

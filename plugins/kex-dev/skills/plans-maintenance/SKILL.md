@@ -26,37 +26,14 @@ description: Plans 文件夹管家：一致性检查、归档、OVERVIEW 维护�
 
 ## 归档流程
 
+读取 `shared/conventions.md` 了解实施计划和 Roadmap 规范。
+
 将已完成的 plan 移入 `docs/plans/archive/`：
 
 1. 在文件头部追加归档信息：`> 归档时间：YYYY-MM-DD`
 2. `mv` 文件到 `archive/`
 3. 更新 overview.md
-
-## overview.md 格式规范
-
-```markdown
-# 实施计划概览
-
-## 当前阶段：<阶段名>
-
-### 活跃计划
-| 计划 | 性质 | 优先级 | 依赖 | 状态 |
-（只列待执行和进行中的 plan）
-
-### 依赖图
-（如有依赖关系则画出）
-
-### 执行建议
-（下一步做什么）
-
-### 近期归档
-（只保留最近一个已完成 phase 的摘要，更早的折叠为一行）
-```
-
-关键规则：
-- "近期归档"只保留上一个已完成 phase 的条目
-- 更早的 phase 折叠为一行，如：`Phase 1 (6 plans) — 已归档`
-- 避免列表无限增长
+4. 勾选 `docs/design/roadmap.md` 中对应的 checkbox（`- [ ]` → `- [x]`）
 
 ## 被其他 skill 调用时
 

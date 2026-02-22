@@ -22,11 +22,11 @@ description: 脑暴 + 设计：探索需求、讨论方案、产出设计文档�
 
 为以下每个步骤创建 task，按顺序完成：
 
-1. **探索项目上下文** — 读取 CLAUDE.md、`docs/design/overview.md`（顶层索引）、`docs/plans/overview.md`、近期 commits
+1. **探索项目上下文** — 读取 CLAUDE.md、`docs/design/overview.md`（顶层索引）、`docs/design/roadmap.md`、`docs/plans/overview.md`、近期 commits
 2. **逐一提问澄清需求** — 每次只问一个问题，理解目的/约束/成功标准
 3. **提出 2-3 种方案** — 附带权衡分析和推荐
 4. **逐节展示设计** — 每节确认后再继续，按复杂度调整篇幅
-5. **编写设计文档** — 保存到 `docs/design/<name>.md` 并提交
+5. **编写设计文档** — 保存到 `docs/design/<name>.md`，创建或更新 `roadmap.md`，提交
 6. **过渡到实施** — 提示用户执行 `/kex-dev:plan`
 
 ## 详细流程
@@ -50,33 +50,9 @@ description: 脑暴 + 设计：探索需求、讨论方案、产出设计文档�
 
 ## 设计文档规范
 
-设计文档采用层级结构（overview + 子文档），便于 AI 按需加载：
+读取 `shared/conventions.md` 了解设计文档结构和 Roadmap 规范。
 
-```
-docs/design/
-├── overview.md          ← 顶层索引（定位、架构图、技术栈）
-├── roadmap.md           ← Roadmap
-├── shared/              ← CLI 与 SaaS 共享概念
-├── cli/                 ← CLI 域设计
-│   └── overview.md      ← CLI 索引
-└── saas/                ← SaaS 域设计
-    └── overview.md      ← SaaS 索引
-```
-
-- 新增设计内容根据所属域保存到对应子目录
-- 跨域共享概念放 `shared/`
-- 每个子目录的 `overview.md` 作为该域的索引
-- 文件名不加日期，变更记录写在文件内部
 - 提交到 git
-
-**放置示例：**
-
-| 设计内容 | 保存位置 | 理由 |
-|----------|----------|------|
-| 纯前端的新功能 | `frontend/feature-x.md` | 只涉及前端域 |
-| 纯后端的新功能 | `backend/feature-y.md` | 只涉及后端域 |
-| 前后端共用的数据格式 | `shared/data-format.md` | 两端都要理解 |
-| 修改现有认证流程 | 更新 `backend/auth.md` | 已有文档，追加变更记录 |
 
 文档头部模板：
 ```markdown
