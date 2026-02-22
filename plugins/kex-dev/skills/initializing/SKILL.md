@@ -22,7 +22,9 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 
 ### Task 1：介绍开发工作流
 
-读取 `${CLAUDE_PLUGIN_ROOT}/skills/initializing/references/workflow.md`，将其内容完整输出给用户。
+将以下工作流文档的内容完整输出给用户：
+
+@${CLAUDE_PLUGIN_ROOT}/skills/initializing/references/workflow.md
 
 ### Task 2：确认目录结构
 
@@ -36,9 +38,9 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 
 ### Task 3：检查并注入 CLAUDE.md
 
-准备：读取 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 和项目根目录 `CLAUDE.md`。
+准备：读取项目根目录 `CLAUDE.md`。然后对照以下规范文档逐项检查：
 
-然后逐项检查并输出：
+@${CLAUDE_PLUGIN_ROOT}/shared/conventions.md
 
 ```
 1. 工作流程（技能链顺序）    → ✅/❌
