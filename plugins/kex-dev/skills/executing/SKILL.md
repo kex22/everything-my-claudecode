@@ -16,9 +16,10 @@ description: 按 plan 逐步实现，TDD 驱动，批量执行 + checkpoint。�
 
 1. 读取 `CLAUDE.md` 了解项目技术栈和规范
 2. 读取 `docs/plans/overview.md` 找到"待执行"或"进行中"的 plan（无 OVERVIEW 则扫描 plan 文件）
-3. 批判性审查 plan — 发现问题先与用户讨论再开始
-4. 从上次未完成的步骤继续（支持跨 session 恢复）
-5. 创建 task 追踪每个步骤
+3. **读取 plan 头部的 `设计文档` 字段，逐一加载列出的设计文档作为执行上下文**（无此字段则跳过）
+4. 批判性审查 plan — 发现问题先与用户讨论再开始
+5. 从上次未完成的步骤继续（支持跨 session 恢复）
+6. 创建 task 追踪每个步骤
 
 ## Step 2：批量执行（默认每批 3 个 task）
 
