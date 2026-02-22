@@ -24,7 +24,7 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 
 将以下工作流文档的内容完整输出给用户：
 
-@${CLAUDE_PLUGIN_ROOT}/skills/initializing/references/workflow.md
+@references/workflow.md
 
 ### Task 2：确认目录结构
 
