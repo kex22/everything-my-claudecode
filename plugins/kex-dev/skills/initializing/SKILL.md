@@ -47,60 +47,34 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 
 ## 2. 介绍文档目录结构
 
-读取 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 了解规范，然后向用户介绍以下目录职责：
+先读取 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 了解规范。然后**用自己的话**向用户逐一介绍 `docs/` 下三个目录的作用，必须覆盖以下要点：
 
-### `docs/design/` — 设计方案（活文档）
+- `docs/design/`：设计方案，是**活文档**（始终反映当前设计，不是历史快照）。由 `/kex-dev:design` 产出，按域分子目录，文件名不加日期
+- `docs/plans/`：实施计划，是执行清单。由 `/kex-dev:plan` 产出，命名带日期。有 `overview.md` 自动追踪进度，完成后归档到 `archive/`
+- `docs/research/`：调研文档，技术选型和竞品分析等支撑材料
 
-由 `/kex-dev:design` 产出。采用层级结构：
+不要原样复制目录树模板，而是结合项目实际情况（如当前有哪些 design 子目录、有多少活跃 plan）来介绍，让用户感受到这是针对当前项目的说明。
 
-```
-docs/design/
-├── overview.md          ← 顶层索引（定位、架构图、技术栈）
-├── roadmap.md           ← Roadmap（按 Phase 用 checkbox 追踪）
-├── shared/              ← 跨域共享概念
-├── <domain-a>/          ← 域 A（如 cli/、saas/）
-│   ├── overview.md      ← 域索引
-│   └── feature-x.md    ← 具体功能设计
-└── <domain-b>/
-    └── overview.md
-```
-
-关键规则：文件名不加日期，变更记录写在文件内部。设计文档是**活文档**，始终反映当前正确设计。
-
-### `docs/plans/` — 实施计划（执行清单）
-
-由 `/kex-dev:plan` 产出。命名格式：`YYYYMMDD-<phase>-<module>.md`
-
-```
-docs/plans/
-├── overview.md                          ← 自动维护的进度概览
-├── 20260222-phase-3a-dashboard-ui.md    ← 活跃 plan（待执行/进行中）
-└── archive/                             ← 已完成的 plan 归档于此
-    └── 20260221-phase-2-config.md
-```
-
-生命周期：待执行 → 进行中 → 已完成（移入 archive/）
-
-### `docs/research/` — 调研文档
-
-技术调研、竞品分析等支撑材料，供设计阶段参考。
-
-确认以下目录存在，不存在则创建：
+最后确认以下目录存在，不存在则创建：
 - `docs/design/`
 - `docs/plans/`
 - `docs/plans/archive/`
 - `docs/research/`
 
-## 3. 检查 CLAUDE.md
+## 3. 检查 CLAUDE.md（关键步骤，不得跳过）
 
-读取项目根目录的 `CLAUDE.md`，确认包含以下关键章节：
-- 工作流程（技能链顺序）
-- 文档目录职责
-- 实施计划规范（参照 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 中的命名、状态标记、archive 机制）
-- 提交规范（plan 文件名作为 scope，详见 `/kex-dev:commit` 技能）
-- 经验教训
+**必须实际读取** 项目根目录的 `CLAUDE.md`，然后逐项检查是否包含以下章节：
 
-如果缺失任何章节，提示用户并提供补充建议。
+1. 工作流程（技能链顺序）
+2. 文档目录职责
+3. 实施计划规范（对照 `${CLAUDE_PLUGIN_ROOT}/shared/conventions.md` 中的命名、状态标记、archive 机制）
+4. 提交规范（plan 文件名作为 scope）
+5. 经验教训
+
+检查完成后，向用户报告结果：
+- 逐项列出每个章节的检查状态（✅ 存在 / ❌ 缺失）
+- 如有缺失，给出具体的补充建议
+- 如全部存在，简要确认即可
 
 ## 4. 显示当前进度
 
