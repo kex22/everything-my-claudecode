@@ -9,8 +9,8 @@ description: 当用户说"代码审查"、"review代码"、"检查实现"时触�
 ## 前置准备
 
 1. 通过 git diff 确定本次审查的代码变更范围
-2. 读取相关的设计文档（`docs/design/`）作为参照
-3. 读取 `docs/plans/OVERVIEW.md` 定位对应的 plan，如需详情再读具体 plan 文件
+2. 读取 `docs/design/overview.md`（顶层索引）定位相关子文档，按需深入阅读作为参照
+3. 读取 `docs/plans/overview.md` 定位对应的 plan，如需详情再读具体 plan 文件
 
 ## 审查维度
 

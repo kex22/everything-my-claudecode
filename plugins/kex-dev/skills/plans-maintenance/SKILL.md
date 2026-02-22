@@ -30,9 +30,9 @@ description: Plans 文件夹管家：一致性检查、归档、OVERVIEW 维护�
 
 1. 在文件头部追加归档信息：`> 归档时间：YYYY-MM-DD`
 2. `mv` 文件到 `archive/`
-3. 更新 OVERVIEW.md
+3. 更新 overview.md
 
-## OVERVIEW.md 格式规范
+## overview.md 格式规范
 
 ```markdown
 # 实施计划概览

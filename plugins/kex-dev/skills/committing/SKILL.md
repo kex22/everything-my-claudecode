@@ -27,7 +27,7 @@ fix(20260221-phase-2-config): handle missing config file gracefully
 
 ## 流程
 
-1. 读取 `docs/plans/OVERVIEW.md` 确定当前正在执行的 plan
+1. 读取 `docs/plans/overview.md` 确定当前正在执行的 plan
 2. 如果无法确定（多个进行中或无进行中），询问用户
 3. 用 `git diff --staged` 分析已暂存的变更
 4. 生成符合格式的 commit message，提交前展示给用户确认

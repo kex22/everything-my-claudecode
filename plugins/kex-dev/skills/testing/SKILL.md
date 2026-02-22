@@ -10,7 +10,7 @@ description: 测试验证：运行项目测试套件，确认质量达标。当�
 
 1. 读取 `CLAUDE.md`，了解项目的技术栈、测试命令和质量要求
 2. 确定本次变更涉及的组件
-3. 读取 `docs/plans/OVERVIEW.md` 了解当前进度，按需读取相关 plan 或 review 产出
+3. 读取 `docs/plans/overview.md` 了解当前进度，按需读取相关 plan 或 review 产出
 
 ## 验证流程
 

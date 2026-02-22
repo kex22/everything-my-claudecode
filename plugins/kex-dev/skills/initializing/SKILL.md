@@ -34,7 +34,7 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 读取项目根目录的 `CLAUDE.md`，确认包含以下关键章节：
 - 工作流程（技能链顺序）
 - 文档目录职责
-- 实施计划规范（滚动规划、状态标记、archive 机制、OVERVIEW.md 维护）
+- 实施计划规范（滚动规划、状态标记、archive 机制、overview.md 维护）
 - Plan 命名规范（`YYYYMMDD-<phase>-<module>.md`）
 - 提交规范（plan 文件名作为 scope，详见 `/kex-dev:commit` 技能）
 - 经验教训
@@ -43,6 +43,6 @@ description: 项目初始化时使用。当用户说"初始化项目"、"开始�
 
 ## 4. 显示当前进度
 
-读取 `docs/plans/OVERVIEW.md` 获取当前进度概览（活跃计划状态、已完成模块、下一步建议）。
-如果 OVERVIEW.md 不存在，则扫描 `docs/plans/` 中的 plan 文件并生成 OVERVIEW.md。
+读取 `docs/plans/overview.md` 获取当前进度概览（活跃计划状态、已完成模块、下一步建议）。
+如果 overview.md 不存在，则扫描 `docs/plans/` 中的 plan 文件并生成 overview.md。
 告知用户下一步应该执行哪个命令。

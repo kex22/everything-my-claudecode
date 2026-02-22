@@ -17,8 +17,8 @@ description: 当用户说"生成计划"、"写实施计划"、"规划实现"时�
 ## 前置检查
 
 1. 读取 `CLAUDE.md` 了解项目技术栈和规范
-2. 读取 `docs/design/` 确认有设计文档可供参考（无则提示先执行 `/kex-dev:design`）
-3. 读取 `docs/plans/OVERVIEW.md` 了解已有计划和当前进度（不存在则扫描 plan 文件）
+2. 读取 `docs/design/overview.md`（顶层索引）确认有设计文档可供参考（无则提示先执行 `/kex-dev:design`），按需深入子文档
+3. 读取 `docs/plans/overview.md` 了解已有计划和当前进度（不存在则扫描 plan 文件）
 4. 检查设计文档是否覆盖了本次规划的内容，缺失则先补充设计
 
 ## 滚动规划 + 并行感知
@@ -107,4 +107,4 @@ Plan 保存后，提供执行选项：
 
 - 文件命名：`docs/plans/YYYYMMDD-<phase>-<module>.md`（日期为创建当天）
 - 头部必须有状态标记（`待执行` / `进行中 (x/y步完成)` / `已完成`）
-- **Plan 保存后，调用 `/kex-dev:plans-maintenance` 更新 OVERVIEW.md**
+- **Plan 保存后，调用 `/kex-dev:plans-maintenance` 更新 overview.md**
